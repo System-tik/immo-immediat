@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Client\VResult;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/test', function (){
+    return view('pages.test');
+});
+Route::get('/form', function (){
+    return view('pages.form');
+});
+
+Route::post('/search/{type}/{ville}/{prix}/{annonce}',[VResult::class, 'search']);
