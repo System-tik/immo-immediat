@@ -1,5 +1,5 @@
 {{-- nav pour lg --}}
-<div class="absolute items-center justify-between hidden w-full lg:flex xl:gap-10 xl:px-20 lg:gap-5 2xl:text-md 2xl:gap-20 2xl:px-72 lg:px-32">
+<div class="absolute items-center justify-between hidden w-full lg:flex xl:gap-10 xl:px-32 lg:gap-5 2xl:text-md 2xl:gap-20 2xl:px-72 lg:px-32">
     {{-- Stop trying to control. --}}
     <div class="flex items-center gap-10 xl:gap-20 ">
         <div class="px-2 pt-8 bg-gradient-to-b from-transparent to-black">

@@ -1,4 +1,4 @@
-<div class="flex flex-col h-full bg-cover lg:py-20 lg:px-32 2xl:px-72 xl:px-20 " style="background-image: url({{ asset('img/un.jpg') }});">
+<div class="flex flex-col h-full bg-cover 2xl:py-20 lg:px-32 2xl:px-72 xl:px-32 xl:pb-10" style="background-image: url({{ asset('img/un.jpg') }});">
     {{-- The Master doesn't talk, he acts. --}}
     <div class="flex items-center justify-center lg:hidden py-14">
         <img src="{{ asset('img/lg1.png') }}" alt="" class=" w-28">
@@ -46,12 +46,12 @@
                         </button>
                     </div>
                 </div>
-                <div class="flex items-center justify-center gap-1 py-3 text-xs">
+                {{-- <div class="flex items-center justify-center gap-1 py-3 text-xs">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-white bg-red-500 rounded-xl">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75" />
                     </svg>
                     <p class="text-gray-600">Plus de criteres</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
