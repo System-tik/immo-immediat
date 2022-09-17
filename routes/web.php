@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Client\VResult;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.welcome');
 });
+Route::get('/details', function () {
+    return view('livewire.client.v-detail');
+});
 
 Route::middleware([
     'auth:sanctum',
@@ -26,3 +30,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/test', function (){
+    return view('pages.test');
+});
+Route::get('/form', function (){
+    return view('pages.form');
+});
+
+Route::post('/search/{type}/{ville}/{prix}/{annonce}',[VResult::class, 'search']);
