@@ -5,5 +5,5 @@
     </div>
 
     <livewire:client.v-detail>
-    
+    <livewire:client.v-footer>
 </div>
