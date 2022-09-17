@@ -13,7 +13,7 @@
         <div class="flex-1">
             <h1 class="font-bold ">{{$le_bien->titre}}</h1>
             <div class="h-20">
-                <p class="text-justify">{{substr($le_bien->description, 0, 100)}} ...</p>
+                <p class="text-justify">{{substr($le_bien->description, 0, 100)}}...</p>
             </div>
         </div>
         <div class="flex items-center justify-between pt-5 border-t">
