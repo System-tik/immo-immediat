@@ -1,4 +1,4 @@
-<div class="py-20 xl:px-20 2xl:px-72 lg:px-32">
+<div class="py-20 xl:px-32 2xl:px-72 lg:px-32">
     {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
   
     <div class="grid xl:grid-cols-3 lg:grid-cols-2">
