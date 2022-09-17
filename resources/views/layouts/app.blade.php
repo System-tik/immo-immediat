@@ -8,24 +8,26 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{asset('css/customcss.css')}}">
+        <link rel="stylesheet" href="{{asset('css/toggle.css')}}">
         @livewireStyles
+
+        <!-- Scripts -->
+        {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
+        <div class="min-h-screen bg-blue-900">
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
@@ -36,9 +38,27 @@
                 {{ $slot }}
             </main>
         </div>
+        {{-- <script>
+            var notif = document.querySelector('#notif');
+            window.addEventListener('Updated', event => {
+                notif.style.transform = "scale(0.2)";
+                setTimeout(() => {
+                    notif.style.transform = "scale(0.6)";
+                    setTimeout(() => {
+                        notif.style.transform = "scale(1)";
+                    }, 100);
+                }, 100);
+                setTimeout(() => {
+                    notif.style.transform = "scale(0)";
+                }, 3000);
+            });
+                
+        </script> --}}
+        
 
         @stack('modals')
 
         @livewireScripts
+        
     </body>
 </html>
