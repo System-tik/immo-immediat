@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.welcome');
 });
+Route::get('/details', function () {
+    return view('livewire.client.v-detail');
+});
 
 Route::middleware([
     'auth:sanctum',
