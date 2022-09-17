@@ -16,4 +16,5 @@
     </div>
     <livewire:client.v-motivation>
     <livewire:client.v-actu>
+    <livewire:client.v-footer>
 @endsection
