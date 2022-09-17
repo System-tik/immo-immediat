@@ -8,6 +8,7 @@
     <livewire:client.v-header>
     {{-- Produits --}}
     <div class="px-5 py-20 2xl:px-72 lg:px-32 xl:px-32">
+        {{bien::join('types', 'types.id', '=', 'biens.type_id')->where()->get()}}
         <div class="pb-3">
             <h1 class="pb-3 text-2xl lg:text-4xl">Nos recentes annonces</h1>
             <hr>
@@ -16,5 +17,4 @@
     </div>
     <livewire:client.v-motivation>
     <livewire:client.v-actu>
-    <livewire:client.v-detail>
 @endsection
