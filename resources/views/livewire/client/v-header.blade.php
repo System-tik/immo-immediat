@@ -1,4 +1,4 @@
-<div class="flex flex-col h-full bg-cover lg:py-20 lg:px-32 2xl:px-72 xl:px-20 " style="background-image: url({{ asset('img/un.jpg') }});">
+<div class="flex flex-col h-full bg-cover lg:py-20 lg:px-32 2xl:px-72 xl:px-48 " style="background-image: url({{ asset('img/un.jpg') }});">
     {{-- The Master doesn't talk, he acts. --}}
     <div class="flex items-center justify-center lg:hidden py-14">
         <img src="{{ asset('img/lg1.png') }}" alt="" class=" w-28">

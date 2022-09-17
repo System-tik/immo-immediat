@@ -1,6 +1,8 @@
 @extends('app')
 
 @section('content')
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v15.0" nonce="NufCGRqq"></script>
     {{-- ici les views du home --}}
     <livewire:client.v-nav>
     <livewire:client.v-header>
@@ -13,4 +15,5 @@
         <livewire:client.v-liste-produit>
     </div>
     <livewire:client.v-motivation>
+    <livewire:client.v-actu>
 @endsection
