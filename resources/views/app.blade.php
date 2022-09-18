@@ -6,6 +6,7 @@
 
         <title>immo-immediat</title>
         @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
         <link rel="stylesheet" href="{{asset('css/moi.css')}}">
         <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
         @livewireStyles()

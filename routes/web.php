@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 Route::get('/details', function () {
-    return view('livewire.client.v-detail');
+    return view('pages.detail');
 });
 
 Route::middleware([
