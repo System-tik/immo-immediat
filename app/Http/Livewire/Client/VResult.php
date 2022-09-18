@@ -12,25 +12,18 @@ class VResult extends Component
 
     public function render()
     {
-        $this->biens = bien::where('prix','<=', '3000')
-        ->where('ville','kj')
-        ->where('type_bien_id','3')
-        ->get();
         return view('livewire.client.v-result');
     }
 
-    public function search(Request $request)
+    public function mount(Request $request)
     {
-        
-
-        $this->biens = bien::join('caracts','caracts.id','=','biens.caract_bien')
-
+        $this->biens = bien::join('type_annonces','type_annonces.id','=','biens.type_annonce_id')
         ->where('prix','<=', $request->prix)
-        ->Orwhere('ville','like','%'.$request->ville.'%')
-        ->Orwhere('type_bien_id',$request->type)
-        ->Orwhere('type_annonce_id',$request->annonce)
-        ->get(['biens.*','caracts.lib']);
-
-        return $this->biens;
+        ->where('ville','like','%'.$request->ville.'%')
+        ->where('type_bien_id',$request->type)
+        ->where('type_annonce_id', $request->annonce)
+        ->get(['biens.*','type_annonces.lib as t_annonce']);
+        //dd(bien::all(), ["prix"=>$request->prix, "ville"=>$request->ville, "type"=>$request->type, "annonce"=>$request->annonce], $this->biens);
+        //dd($this->biens);
     }
 }
