@@ -20,6 +20,9 @@
                         <input name="h" id="url" wire:model="url" class="flex-1 p-2 placeholder-gray-600 transition transform border rounded-lg" placeholder="url" />
                         @error('url') <span class="text-red-600">{{ $message }}</span><br> @enderror
                         <input type="text" class="flex-1 p-2 placeholder-gray-700 border-2 rounded-lg" placeholder="Type de l'actualité" wire:model="type">
+                        @error('type') <span class="text-red-600">{{ $message }}</span><br> @enderror
+                        <input type="file" class="flex-1 p-2 placeholder-gray-700 border-2 rounded-lg" placeholder="ajouter une image" wire:model="image">
+                        @error('image') <span class="text-red-600">{{ $message }}</span><br> @enderror
                     </div>
                     
                     <div class="flex">

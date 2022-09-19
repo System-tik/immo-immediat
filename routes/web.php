@@ -39,3 +39,4 @@ Route::get('/form', function (){
 });
 
 Route::post('/search/{type}/{ville}/{prix}/{annonce}',[VResult::class, 'search']);
+

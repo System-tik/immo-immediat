@@ -3,16 +3,20 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
-
 use App\Models\actu;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Storage;
 
 class VActu extends Component
 {
+    use WithFileUploads;
+
     public $titre;
     public $descrip;
     public $url;
     public $type;
-    public $actus;
+    public $actualites;
+    public $image;
     public $idUnique;
     public $idUnique1;
     public $idUnique2;
@@ -22,6 +26,7 @@ class VActu extends Component
         'descrip.required' => 'Veuillez saisir la decription',
         'url.required' => 'Veuillez sasir l\'url.',
         'type.required' => 'Veuillez indiquer le type.',
+        'image.required' => 'Veuillez ajouter une image',
 
         'idUnique1' => 'Veuillez séléctionner une actualité.',
         'idUnique2' => 'Veuillez séléctionner une actualité.',
@@ -41,10 +46,12 @@ class VActu extends Component
             'titre' => 'required',
             'descrip' => 'required',
             'url' => 'required',
-            'type' => 'required'
+            'type' => 'required',
+            'image' => 'required'
         ]);
 
         $record = actu::create($validate);
+        $this->image->storePubliclyAs('public/actualite', $record->id.'.png');
 
         session()->flash('message', 'actu enregistré avec succès');
         $this->emit('Added');
@@ -58,6 +65,7 @@ class VActu extends Component
         $this->descrip = "";
         $this->type = "";
         $this->url = "";
+        $this->image = "";
     }
 
     public function charger($data){
@@ -76,7 +84,8 @@ class VActu extends Component
             'descrip' => 'required',
             'url' => 'required',
             'type' => 'required',
-            'idUnique1' => 'required'
+            'idUnique1' => 'required',
+            'image' => 'required'
         ]);
 
         $record = actu::find($this->idUnique1);
@@ -94,6 +103,7 @@ class VActu extends Component
 
         $record = actu::find($this->idUnique2);
         $record->delete();
+        
         session()->flash('message', 'actu delete avec succès');
         $this->emit('Deleted');
         $this->dispatchBrowserEvent('Deleted');
