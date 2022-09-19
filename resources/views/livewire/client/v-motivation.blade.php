@@ -14,7 +14,7 @@
             </p>
         </div>
         <div>
-            <a class="px-10 py-3 font-bold text-white bg-red-700 rounded-sm ">Decouvrir</a>
+            <a href="{{route('agence')}}" class="px-10 py-3 font-bold text-white bg-red-700 rounded-sm ">Decouvrir</a>
         </div>
     </div>
 </div>
