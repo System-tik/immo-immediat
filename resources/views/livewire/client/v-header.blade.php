@@ -8,14 +8,14 @@
             <h1 class="text-2xl font-extrabold lg:text-4xl">IMMO-IMMEDIAT</h1>
             <p class="text-lg font-bold lg:text-2xl">Le portail immobilier qu'il vous faut</p>
         </div>
-        <form class="" method="post" action="search" x-data= "{btn :'acheter'}">
-            @csrf
-            <input type="hidden" x-model="btn" id="champs">
+        <form class="" method="post" action="search" x-data= "{btn :'1'}">
             <div class="flex items-center justify-center font-bold">
-                <button class="px-5 py-2 text-gray-600 bg-white border-r-2 focus:py-3 focus:bg-red-600 focus:text-white focus:border-none w-28" :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='acheter'}" @click="btn='acheter';recupere()">Acheter</button>
-                <button class="px-5 py-2 text-gray-600 bg-white focus:py-3 focus:bg-red-600 focus:text-white w-28"  :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='louer'}"  @click="btn='louer'">Louer</button>
-                <button class="px-5 py-2 text-gray-600 bg-white border-l-2 focus:py-3 focus:bg-red-600 focus:text-white focus:border-none w-28" :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='vendre'}" @click="btn='vendre'">Vendre</button>
+                <button type="button" class="px-5 py-2 text-gray-600 bg-white border-r-2 focus:py-3 focus:bg-red-600 focus:text-white focus:border-none w-28" :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='1'}" @click="btn='1';recupere()">Acheter</button>
+                <button type="button" class="px-5 py-2 text-gray-600 bg-white focus:py-3 focus:bg-red-600 focus:text-white w-28"  :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='2'}"  @click="btn='2'">Louer</button>
+                <button type="button" class="px-5 py-2 text-gray-600 bg-white border-l-2 focus:py-3 focus:bg-red-600 focus:text-white focus:border-none w-28" :class="{'bg-red-600 text-white py-3 border-none w-28 ':btn=='vendre'}" @click="btn='vendre'">Vendre</button>
             </div>
+            @csrf
+            
             <div class="flex flex-col gap-2 p-5 mt-6 font-bold bg-white">
                 <h1 class="text-2xl text-gray-700">Ou cherchez vous?</h1>
                 <div>
@@ -36,8 +36,8 @@
                         <h3 class="p-1 text-xs text-gray-700">BUDGET</h3>
                         <input name="prix" type="text"  id="" placeholder="Max" class="w-full h-10 text-xs border-gray-400 ">
                     </div>
-                    <input type="hidden" name="annonce" value="1">
-                    
+                    {{-- <input type="hidden" name="annonce" value="1"> --}}
+                    <input type="hidden" x-model="btn" id="champs" name="annonce">
                 </div>
                 <div class="grid items-end grid-cols-1 gap-2 md:flex">
                     <div class="w-full">

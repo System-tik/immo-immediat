@@ -22,7 +22,7 @@ class VResult extends Component
         ->where('ville','like','%'.$request->ville.'%')
         ->where('type_bien_id',$request->type)
         ->where('type_annonce_id', $request->annonce)
-        ->get(['biens.*','type_annonces.lib as t_annonce']);
+        ->get(['biens.*','type_annonces.lib']);
         //dd(bien::all(), ["prix"=>$request->prix, "ville"=>$request->ville, "type"=>$request->type, "annonce"=>$request->annonce], $this->biens);
         //dd($this->biens);
     }
