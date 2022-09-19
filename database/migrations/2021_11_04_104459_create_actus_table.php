@@ -17,8 +17,8 @@ class CreateActusTable extends Migration
             $table->id();
             $table->string('titre');
             $table->string('descrip');
-            $table->string('url');
-            $table->string('type');
+            $table->string('url')->nullable();
+            $table->string('source');
             $table->timestamps();
         });
     }
