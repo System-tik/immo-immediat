@@ -1,23 +1,31 @@
 <div>
-    <div class="flex gap-5 px-32 mt-6">
+    <div class="grid  grid-cols-12 gap-2 px-5 sm:px-10 md:px-20 lg:px-32 mt-6  ">
         {{-- left images box --}}
-        <div class="basis-1/6">
+        <div class="col-span-2 hidden lg:flex lg:flex-col">
             <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl">
             <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl mt-2">
-            <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl mt-2">
-        </div>
+          <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl mt-2">
+        </div>  
         {{-- central image --}}
-        <div class="basis-3/6">
-            <img src="{{ asset('img/maison/2466_1.jpg') }}" class="w-full h-full rounded-2xl">
+        <div class="col-span-12 lg:col-span-6">
+            <img src="{{ asset('img/maison/2466_1.jpg') }}" class="w-full h-40 sm:h-80 lg:h-full rounded-2xl">
         </div>
+
+        {{-- left images box --}}
+        <div class="col-span-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 lg:hidden">
+            <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl">
+            <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl ">
+          <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl hidden sm:grid">
+        </div> 
+
         {{-- contact us card right --}}
-        <div class="basis-2/6 rounded-2xl border border-red-200">
-            <div class="flex flex-col items-center justify-center mt-10 mb-8">
+        <div class="col-span-12 lg:col-span-4 py-2 lg:py-0 hidden lg:flex px-2 lg:px-0 justify-center  items-center lg:flex-col rounded-2xl lg:border border-red-200">
+            <div class="flex flex-col items-center justify-center lg:mt-10 lg:mb-8">
                 <img src="{{ asset('img/lg1.png') }}" class="rounded-full border w-36 h-36" alt="">
                 <h1 class="mt-2 font-bold text-xl">IMMO IMMEDIATE</h1>
                 <p class="text-sm">12 Haut Commandement, Kinshasa Gombe</p>
             </div>
-            <div class="flex flex-col bg-blue-100 h-36 p-2 rounded-b-2xl text-white">
+            <div class="flex flex-col h-36 p-2 rounded-b-2xl text-white">
                 <button class="flex items-center justify-center gap-2 border bg-red-600 py-2 rounded-lg mt-4 hover:bg-red-500">
                     Contacter par mail
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -34,36 +42,36 @@
         </div>
     </div>
 
-    <div class="flex flex-col px-32">
+    <div class="flex flex-col px-5 sm:px-10 md:px-20 lg:px-32">
         <div class="flex">
-            <div class="basis-4/6 flex-col border border-red-200 rounded-2xl mt-6 p-10">
-                <div class="flex">
-                    <div class="basis-2/3">
+            <div class="lg:basis-4/6 w-full flex-col border border-red-200 rounded-2xl mt-6 p-3 xl:p-10">
+                <div class="md:flex">
+                    <div class="md:basis-2/3 w-full">
                         <h3 class="text-md font-semibold">Reference 33</h3>
                         <h2 class="font-bold text-2xl uppercase">LOUVECIENNES - VILLA MEUBLEE,</h2>
                         <h3 class="text-lg text-gray-500">Louveciennes 78430</h3>
-                        <div class="flex mt-8 gap-5">
-                            <span class="border rounded-2xl p-2 inline-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <div class="flex justify-center mt-8 gap-1 text-xs xl:text-md xl:gap-5 ">
+                            <span class=" border rounded-2xl p-1 xl:p-2 inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:w-6 xl:h-6 h-5 w-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
                                 </svg>     
                                 11 piece(s)                     
                             </span>
-                            <span class="border rounded-2xl p-2 inline-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <span class="border rounded-2xl p-1 xl:p-2 inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:w-6 xl:h-6 h-5 w-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
                                 </svg>                          
                                 5 chambre(s)
                             </span>
-                            <span class="border rounded-2xl p-2 inline-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <span class="border rounded-2xl p-1 xl:p-2 inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="xl:w-6 xl:h-6 h-5 w-5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
                                 </svg>                          
                                 500 m²
                             </span>
                         </div>
                     </div>
-                    <div class="basis-1/3">
+                    <div class="md:basis-1/3 w-full mt-2 md:mt-0">
                         <h2 class="text-2xl font-semibold mb-5 text-red-600">Loyer 1500 $/mois</h2>
                         <p class="text-xs text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                             Repellendus aliquid mollitia, atque quasi architecto corporis quod optio eaque 
@@ -98,9 +106,9 @@
                     </p>
                 </div>
 
-                <div class="flex mt-6 gap-10">
+                <div class="md:flex-row flex flex-col mt-6 gap-10 px-5 md:px-0">
                     {{-- Creer compte --}}
-                    <div class="basis-1/2">
+                    <div class="w-full md:basis-1/2">
                         <h2 class="font-bold text-xl mb-3">Vous n'êtes pas encore inscrit ?</h2>
                         <span class="text-lg">
                             Je suis un nouveau visiteur.
@@ -116,14 +124,14 @@
                     </div>
 
                     {{-- Se connecter --}}
-                    <div class="basis-1/2">
-                        <h2 class="font-bold text-xl mb-3">Vous êtes déjà inscrit ?</h2>
-                        <form class="flex flex-col mt-5">
-                            <div class="">
+                    <div class="w-full md:basis-1/2">
+                        <h2 class="font-bold text-xl text-center mb-3">Vous êtes déjà inscrit ?</h2>
+                        <form class="flex flex-col items-center mt-5">
+                            <div class="flex flex-col">
                                 Adresse email :
                                 <input type="text">
                             </div>
-                            <div class="basis-2/4 mt-2">
+                            <div class="basis-2/4 mt-2 flex flex-col">
                                 Mot de passe :
                                 <input type="password">
                             </div>
@@ -136,7 +144,7 @@
             </div>
         </div>
         <div class="flex">
-            <div class="basis-4/6 mt-3 mb-3">
+            <div class="lg:basis-4/6 w-full mt-3 mb-3">
                 <h3 class="text-sm font-bold mb-3">
                     Mentions légales
                 </h3>
