@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="text-white ">
-           {{--  <h1 class="flex py-2 text-xl text-start">RESEAUX SOCIAUX</h1> --}}
+            {{--  <h1 class="flex py-2 text-xl text-start">RESEAUX SOCIAUX</h1> --}}
             <div class="grid grid-cols-2 gap-6 sm:flex">
                 <a href="{{$cmptes[0]->url}}" class="flex items-center justify-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 48 48" style=" fill:#1A1A1A;">

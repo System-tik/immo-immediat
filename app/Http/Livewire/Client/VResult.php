@@ -3,15 +3,26 @@
 namespace App\Http\Livewire\Client;
 
 use App\Models\bien;
+use App\Models\type_annonce;
+use App\Models\type_bien;
 use Illuminate\Http\Request;
 use Livewire\Component;
 
 class VResult extends Component
 {
     public $biens;
+    public $type_annonces;
+    public $type_biens;
+
+    public $loc;
+    public $budget;
+    public $tpa;
+    public $tpb;
 
     public function render()
     {
+        $this->type_annonces = type_annonce::all();
+        $this->type_bien = type_bien::all();
         return view('livewire.client.v-result');
     }
 
@@ -25,5 +36,10 @@ class VResult extends Component
         ->get(['biens.*','type_annonces.lib']);
         //dd(bien::all(), ["prix"=>$request->prix, "ville"=>$request->ville, "type"=>$request->type, "annonce"=>$request->annonce], $this->biens);
         //dd($this->biens);
+    }
+
+    public function searchcat()
+    {
+        
     }
 }
