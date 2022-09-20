@@ -18,9 +18,9 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('pages.welcome');
 });
-Route::get('/details', function () {
-    return view('pages.detail');
-});
+Route::get('/details/{id}', function ($id) {
+    return view('pages.detail', ['idb'=>$id]);
+})->name('detail');
 
 Route::middleware([
     'auth:sanctum',
