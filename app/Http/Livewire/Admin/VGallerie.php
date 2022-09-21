@@ -89,7 +89,7 @@ class VGallerie extends Component
         $this->emit('Deleted');
         $this->dispatchBrowserEvent('Deleted');
         ///$this->Store->storePubliclyAs('public/gallerie/', $this->selectedId.'.png');
-        Storage::delete('public/gallerie/'.$this->selectedId.'.png');   
+        //Storage::delete('public/gallerie/'.$this->selectedId.'.png');   
         $this->resetFields();
     }
 

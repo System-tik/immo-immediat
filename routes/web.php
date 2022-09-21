@@ -39,11 +39,8 @@ Route::get('/form', function (){
     return view('pages.form');
 });
 
-<<<<<<< HEAD
-Route::post('/search/{type}/{ville}/{prix}/{annonce}',[VResult::class, 'search']);
 
-=======
 Route::post('/search',function(Request $request){
     return view('pages.result',['request'=>$request]);
 });
->>>>>>> c4250565f582a4bee4aa14f1cd0d7c59e8df33e8
+

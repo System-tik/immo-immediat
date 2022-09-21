@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<div>
-    <h1>liste de la recherce</h1>
-    @foreach ($biens as $bien)
-        <p>{{ $bien }}</p>
-    @endforeach
-=======
 <div class="flex flex-col px-72">
     <div class="flex gap-4 p-5 px-32 mt-5 mb-6 bg-red-500 rounded-lg h-28">
         <div class="w-48 text-white">
@@ -43,6 +36,5 @@
         @endforeach
         
     </div>
->>>>>>> c4250565f582a4bee4aa14f1cd0d7c59e8df33e8
 </div>
 

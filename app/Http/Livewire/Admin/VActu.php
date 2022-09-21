@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\actu;
+use Exception;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 
@@ -17,9 +18,7 @@ class VActu extends Component
     public $type;
     public $actualites;
     public $image;
-    public $idUnique;
-    public $idUnique1;
-    public $idUnique2;
+    public $selectedId;
 
     protected $messages = [
         'titre.required' => 'Veuillez saisir le titre.',
@@ -28,8 +27,7 @@ class VActu extends Component
         'type.required' => 'Veuillez indiquer le type.',
         'image.required' => 'Veuillez ajouter une image',
 
-        'idUnique1' => 'Veuillez séléctionner une actualité.',
-        'idUnique2' => 'Veuillez séléctionner une actualité.',
+        'selectedId.required' => 'Veuillez séléctionner une actualité.',
     ];
 
     public function render()
@@ -65,43 +63,44 @@ class VActu extends Component
         $this->descrip = "";
         $this->type = "";
         $this->url = "";
-        $this->image = "";
-    }
+        
+    } 
 
     public function charger($data){
         $this->titre = $data['titre'];
         $this->url = $data['url'];
         $this->descrip = $data['descrip'];
         $this->type = $data['type'];
-        $this->idUnique = $data['id'];
-        $this->idUnique1 = $data['id'];
-        $this->idUnique2 = $data['id'];
+        $this->selectedId = $data['id'];
+        
     }
 
     public function update(){
+        $this->validate(['selectedId' => 'required']);
         $validate = $this->validate([
             'titre' => 'required',
             'descrip' => 'required',
             'url' => 'required',
             'type' => 'required',
-            'idUnique1' => 'required',
             'image' => 'required'
         ]);
 
-        $record = actu::find($this->idUnique1);
+        $record = actu::find($this->selectedId);
         $record->update($validate);
+        $this->image->storePubliclyAs('public/actualite', $record->id.'.png');
         session()->flash('message', 'actu mise à jour avec succès');
         $this->emit('Updated');
         $this->dispatchBrowserEvent('Updated');
         $this->resetFields();
     }
 
-    public function del(){
-        $valitate = $this->validate([
-            'idUnique2' => 'required'
+    public function delete(){
+        $this->validate([
+            'selectedId' => 'required'
         ]);
 
-        $record = actu::find($this->idUnique2);
+        $record = actu::find($this->selectedId);
+        Storage::delete('public/actualite/'.$this->selectedId. '.png');        
         $record->delete();
         
         session()->flash('message', 'actu delete avec succès');
