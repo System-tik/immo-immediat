@@ -8,13 +8,13 @@
     </div>
     <div class="hidden gap-8 pt-10 text-white lg:flex">
         <div class="flex items-center gap-8">
-            <a href="#annonces">Annonces</a>
+            <a href="/#annonces">Annonces</a>
             {{-- <a href="#">Location</a> --}}
             {{-- <a href="#">Biens vendus</a>
             <a href="#">Gestion</a>
             <a href="#">Estimation</a> --}}
-            <a href="#agence">Agence</a>
-            <a href="#actus">Actualites</a>
+            <a href="/#agence">Agence</a>
+            <a href="/#actus">Actualites</a>
             {{-- <a href="#">contact</a> --}}
             <a class="flex items-center gap-2 px-2 py-1 text-gray-700 bg-white rounded" href="#footer">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">

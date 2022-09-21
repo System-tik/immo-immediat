@@ -10,7 +10,7 @@
         <h1 class="text-2xl lg:text-4xl">Découvrez notre agence</h1>
         <div class="py-10">
             <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatum laborum voluptates ex nobis doloribus eligendi blanditiis optio rem, quam quis officiis, perspiciatis aperiam dolores explicabo quasi, facilis architecto consectetur!
+                {{$agences[0]->description}}
             </p>
         </div>
         <div>

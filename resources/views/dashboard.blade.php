@@ -8,7 +8,7 @@
     <div class="flex h-screen px-10 pt-10" 
         x-data="
         {
-            nav : [false, false, false, false, false, false, true, false],
+            nav : [true, false, false, false, false, false, false, false, false],
             active(id){
                 if(this.nav[id] != true){
                     this.nav[id] = true;
@@ -57,6 +57,10 @@
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     <p class="hidden xl:flex">Propositions</p>
                 </a>
+                <a class="flex items-center w-full gap-2 px-2 py-3 font-bold menu-over hover:bg-white hover:text-gray-700" href="#" :class="{'bg-white' : nav[8], 'text-gray-100' : !nav[8]}" @click="active(8)">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <p class="hidden xl:flex">Agence</p>
+                </a>
             </div>
         </div>
         <div class="flex flex-col flex-1 px-1 py-2 bg-white rounded-2xl ">
@@ -85,6 +89,9 @@
                 </div>
                 <div x-show="nav[7]">
                     <livewire:admin.v-proposition>
+                </div>
+                <div x-show="nav[8]">
+                    <livewire:admin.v-agence>
                 </div>
             </div>
         </div>
