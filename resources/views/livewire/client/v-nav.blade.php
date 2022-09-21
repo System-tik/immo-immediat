@@ -2,9 +2,9 @@
 <div class="absolute items-center justify-between hidden w-full lg:flex xl:gap-10 xl:px-32 lg:gap-5 2xl:text-md 2xl:gap-20 2xl:px-72 lg:px-32" id="nav">
     {{-- Stop trying to control. --}}
     <div class="flex items-center gap-10 xl:gap-20 ">
-        <div class="px-2 pt-8 bg-gradient-to-b from-transparent to-black">
+        <a href="/" class="px-2 pt-8 bg-gradient-to-b from-transparent to-black">
             <img src="{{ asset('img/lg1.png') }}" alt="" class="w-28 ">
-        </div>
+        </a>
     </div>
     <div class="hidden gap-8 pt-10 text-white lg:flex">
         <div class="flex items-center gap-8">
