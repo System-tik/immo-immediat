@@ -19,7 +19,7 @@
                 <a href="{{$cpt->url}}" class="flex items-center justify-center gap-2">
                     <div class="flex items-center justify-center w-6 h-6 bg-black">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 48 48" style=" fill:#1A1A1A;">
-                        
+                            glodi
                             <path fill="#FFF" d="{{$cpt->icon}}"></path>
                         </svg>
                     </div>
