@@ -18,8 +18,10 @@
 
         <!-- Scripts -->
         {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
-        @vite('resources/css/app.css')
-        @vite('resources/js/app.js')
+        {{-- @vite('resources/css/app.css')
+        @vite('resources/js/app.js') --}}
+        <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
+        <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
