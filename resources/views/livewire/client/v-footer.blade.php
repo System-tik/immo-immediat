@@ -9,6 +9,7 @@
                 <span>{{$con->lib}} :</span>
                 <span>{{$con->url}}</span>
             </a>
+            
             @endforeach
             </div>
         </div>
