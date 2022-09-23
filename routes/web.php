@@ -39,11 +39,15 @@ Route::get('/form', function (){
     return view('pages.form');
 });
 
+
 Route::post('/search',function(Request $request){
     return view('pages.result',['request'=>$request]);
 });
 
+<<<<<<< HEAD
+=======
 
 Route::get('/agence', function (){
     return view('pages.agence');
 })->name('agence');
+>>>>>>> 0346c91c98b688843d4097317cef3dd6b69afa1b

@@ -11,6 +11,9 @@ use Livewire\Component;
 class VResult extends Component
 {
     public $biens;
+<<<<<<< HEAD
+    public $i;
+=======
     public $type_annonces;
     public $type_biens;
 
@@ -19,6 +22,7 @@ class VResult extends Component
     public $tpa;
     public $tpb;
 
+>>>>>>> 0346c91c98b688843d4097317cef3dd6b69afa1b
     public function render()
     {
         $this->type_annonces = type_annonce::all();
@@ -34,8 +38,6 @@ class VResult extends Component
         ->where('type_bien_id',$request->type)
         ->where('type_annonce_id', $request->annonce)
         ->get(['biens.*','type_annonces.lib']);
-        //dd(bien::all(), ["prix"=>$request->prix, "ville"=>$request->ville, "type"=>$request->type, "annonce"=>$request->annonce], $this->biens);
-        //dd($this->biens);
     }
 
     public function searchcat()
