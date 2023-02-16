@@ -22,7 +22,7 @@ class VResult extends Component
     public function render()
     {
         $this->type_annonces = type_annonce::all();
-        $this->type_bien = type_bien::all();
+        $this->type_biens = type_bien::all();
         return view('livewire.client.v-result');
     }
 
