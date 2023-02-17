@@ -20,6 +20,7 @@
         {{-- @vite('resources/css/app.css')
         @vite('resources/js/app.js') --}}
         <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/moi.css') }}">
         <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
     </head>
     <body class="font-sans antialiased">
