@@ -11,9 +11,8 @@ use Livewire\Component;
 class VResult extends Component
 {
     public $biens;
-<<<<<<< HEAD
+
     public $i;
-=======
     public $type_annonces;
     public $type_biens;
 
@@ -22,7 +21,6 @@ class VResult extends Component
     public $tpa;
     public $tpb;
 
->>>>>>> 0346c91c98b688843d4097317cef3dd6b69afa1b
     public function render()
     {
         $this->type_annonces = type_annonce::all();
