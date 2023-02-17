@@ -17,7 +17,6 @@ class VResult extends Component
     public $ville;
     public $prix;
     public $tpa;
-    public $tpb;
 
     public function render()
     {

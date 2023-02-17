@@ -10,6 +10,7 @@ class VDetail extends Component
 {
     public $bien;
     public $caracts;
+    public $position = 0;
 
     public function render()
     {
@@ -21,5 +22,10 @@ class VDetail extends Component
         $this->bien = bien::join('type_annonces','type_annonces.id','=','biens.type_annonce_id')
         ->where('biens.id', $idb)
         ->get(['biens.*','type_annonces.lib'])->first();
+    }
+
+    public function change_img($id)
+    {
+        $this->position = $id;
     }
 }
