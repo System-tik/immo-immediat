@@ -6,9 +6,6 @@
             <h1 class="px-5 pb-3 text-2xl lg:text-4xl lg:px-0">Suivez notre actualité</h1>
             <div class="grid gap-2 px-5 lg:grid-cols-2 lg:px-0">
                 <livewire:components.c-actu>
-                <livewire:components.c-actu>
-                <livewire:components.c-actu>
-                <livewire:components.c-actu>
             </div>
         </div>
         <div class="w-full px-5 lg:px-0">
