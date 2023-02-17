@@ -15,7 +15,7 @@
         <div class="col-span-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 lg:hidden">
             <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl">
             <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl ">
-          <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl hidden sm:grid">
+            <img src="{{ asset('img/maison/2466_1.jpg') }}" alt="" class="rounded-2xl hidden sm:grid">
         </div> 
 
         {{-- contact us card right --}}
