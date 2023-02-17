@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class agence extends Model
 {
     use HasFactory;
+    protected $fillable = ['titre', 'description'];
 }

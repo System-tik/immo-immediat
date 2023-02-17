@@ -44,6 +44,13 @@ Route::post('/search',function(Request $request){
     return view('pages.result',['request'=>$request]);
 });
 
+
+Route::get('/agence', function (){
+    return view('pages.agence');
+})->name('agence');
+
+
+
 Route::get('/agence', function (){
     return view('pages.agence');
 })->name('agence');

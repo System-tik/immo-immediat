@@ -11,14 +11,17 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{asset('css/customcss.css')}}">
         <link rel="stylesheet" href="{{asset('css/toggle.css')}}">
         @livewireStyles
 
         <!-- Scripts -->
         {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- @vite('resources/css/app.css')
+        @vite('resources/js/app.js') --}}
+        <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/moi.css') }}">
+        <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

@@ -1,9 +1,9 @@
 @extends('app')
 <div class="">
-    <div class="bg-red-500 h-32">
+    <div class="h-32 bg-red-500">
         <livewire:client.v-nav>
     </div>
 
-    <livewire:client.v-detail>
+    <livewire:client.v-detail :idb="$idb">
     <livewire:client.v-footer>
 </div>

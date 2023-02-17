@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>immo-immediat</title>
-        @vite('resources/css/app.css')
-        @vite('resources/js/app.js')
+        {{-- @vite('resources/css/app.css')
+        @vite('resources/js/app.js') --}}
         <link rel="stylesheet" href="{{asset('css/moi.css')}}">
         <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
+        <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
         @livewireStyles()
         
     </head>
@@ -24,7 +26,7 @@
              // Make sure this.hash has a value before overriding default behavior
              if (this.hash !== "") {
                // Prevent default anchor click behavior
-               event.preventDefault();
+               //event.preventDefault();
          
                // Store hash
                var hash = this.hash;
