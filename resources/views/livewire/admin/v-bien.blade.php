@@ -144,7 +144,7 @@
     </div>
     
     {{-- Proprietes des biens --}}
-    <div class="absolute top-0 left-0 flex flex-col w-screen h-screen gap-3 p-5 black-transparent" x-transition.500ms x-show="props">
+    <div class="absolute top-0 left-0 flex flex-col w-screen h-screen gap-3 bg-t-black" x-transition.500ms x-show="props">
         <div class="flex items-center justify-between text-white bg-black">
             <p class="px-5"><b>Caracteristique / Type de biens / Type d'annonces</b></p>
             <button class="p-2 text-white bg-red-600" @click="props=false">X</button>
@@ -163,8 +163,8 @@
     </div>
 
      {{-- Modal --}}
-     <div class="absolute top-0 left-0 flex items-center justify-center w-screen h-screen gap-10 p-5 text-white black-transparent" x-show="modal"  x-transition.500ms>
-        <div class="flex flex-col items-center justify-center w-full gap-10 p-5 black-transparent" >
+     <div class="absolute top-0 left-0 flex items-center justify-center w-screen h-screen gap-10 p-5 text-white bg-t-black" x-show="modal"  x-transition.500ms>
+        <div class="flex flex-col items-center justify-center w-full gap-10 p-5 bg-t-black" >
             <div x-data="{ isUploading : false, progress : 0 }"
                 x-on:livewire-upload-start="isUploading = true"
                 x-on:livewire-upload-finish="isUploading = false" 
@@ -226,7 +226,7 @@
     @endif --}}
 
     {{-- gallerie --}}
-    <div class="absolute top-0 left-0 flex flex-col w-screen h-screen black-transparent" x-show="gallerie" x-transition.500ms>
+    <div class="absolute top-0 left-0 flex flex-col w-screen h-screen bg-t-black" x-show="gallerie" x-transition.500ms>
         <div class="flex items-center justify-between text-white bg-black">
             <p class="px-5"><b>Gallerie d'images du bien</b></p>
             <button class="p-2 text-white bg-red-600" @click="gallerie=false">X</button>
