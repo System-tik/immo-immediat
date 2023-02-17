@@ -11,7 +11,7 @@
         <div class="col-span-2 text-white xl:W-1/6">
             <label for="last_name" class="block mb-2 text-sm font-medium dark:text-gray-300">Type de bien</label>
             <select wire:model="tpb" class="block w-full text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-blue-500" name="" id="">
-            @foreach ($type_bien as $tpb)
+            @foreach ($type_biens as $tpb)
             <option value="{{$tpb->id}}" name="tpb">{{$tpb->lib}}</option>
             @endforeach
             </select>
