@@ -5,12 +5,12 @@
         {{-- left images box --}}
         <div class="hidden gap-2 lg:flex lg:flex-col">
             @foreach (Storage::files('public/biens/'.$bien->id.'/') as $img)
-            <img src="{{ asset(str_replace('public', 'storage', $img)) }}" alt="" class="rounded-2xl">
+            <img src="{{ asset(str_replace('public', 'storage', $img)) }}" alt="" class="rounded-2xl h-20">
             @endforeach
         </div>  
         {{-- central image --}}
         <div class="col-span-12 lg:col-span-7">
-            <img src="{{asset(str_replace('public', 'storage', Storage::files('public/biens/'.$bien->id.'/')[0]))}}" class="w-full h-40 sm:h-80 lg:h-full rounded-2xl">
+            <img src="{{asset(str_replace('public', 'storage', Storage::files('public/biens/'.$bien->id.'/')[0]))}}" class="w-full h-40 sm:h-80 lg:h-96 rounded-2xl">
         </div>
 
         {{-- left images box --}}
