@@ -3,11 +3,25 @@
 }" class="px-5 sm:px-10 md:px-20 lg:px-32 2xl:px-72">
     <div class="grid grid-cols-12 gap-2 mt-6">
         {{-- left images box --}}
-        <div class="hidden gap-2 lg:flex lg:flex-col">
-            @foreach (Storage::files('public/biens/'.$bien->id.'/') as $img)
-            <img src="{{ asset(str_replace('public', 'storage', $img)) }}" alt="" class="cursor-pointer rounded-2xl h-20" wire:click="change_img({{$loop->index}})">
-            @endforeach
-        </div>  
+        <section id="main-carousel" class="splide" aria-label="My Awesome Gallery">
+            <div class="splide__track">
+              <ul class="splide__list">
+                  <div class="hidden gap-2 lg:flex lg:flex-col">
+                    @foreach (Storage::files('public/produits/'.$produit->id) as $b)
+                        <li class="splide__slide">
+                            <img src="{{asset(str_replace('public', 'storage', $b))}}?{{ rand() }}" alt="Pas d'image pour cette info" style="height:384px;" class="w-full h-96">
+                        </li>
+                    @endforeach
+                  </div>  
+                </ul>
+            </div>
+        </section>
+        {{-- @foreach (Storage::files('public/produits/'.$produit->id) as $b)                    
+            <li class="splide__slide">
+                <img src="{{asset(str_replace('public', 'storage', $b))}}?{{ rand() }}" alt="Pas d'image pour cette info" style="height:384px;" class="w-full h-96">
+            </li>
+        @endforeach            --}}
+        
         {{-- central image --}}
         <div class="col-span-12 lg:col-span-7 ">
             <div style="height:384px;" class="w-full h-96 flex justify-center items-center absolute">

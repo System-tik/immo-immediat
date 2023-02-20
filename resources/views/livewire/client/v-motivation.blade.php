@@ -9,9 +9,9 @@
     <div class="flex flex-col justify-center flex-1 ">
         <h1 class="text-2xl lg:text-4xl">Découvrez notre agence</h1>
         <div class="py-10">
-            {{-- <p class="text-justify">
+            <p class="text-justify">
                 {{$agences[0]->description}}
-            </p> --}}
+            </p>
         </div>
         <div>
             <a href="{{route('agence')}}" class="px-10 py-3 font-bold text-white bg-red-700 rounded-sm ">Decouvrir</a>

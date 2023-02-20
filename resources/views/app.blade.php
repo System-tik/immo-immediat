@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
         <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
         <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
+
+        <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+        <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
         @livewireStyles()
         
     </head>
