@@ -14,6 +14,38 @@
 
         <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
         <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+
+        <style>
+          .splide__slide img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }
+  
+          .splide__slide {
+              opacity: 0.6;
+          }
+  
+          .splide__slide.is-active{
+              opacity: 1;
+          }
+  
+          .l{
+              display: grid;
+              grid-template-columns: 100px 400px ;
+              
+              gap: 20px;
+              column-gap: 50px;
+              
+  
+             
+              width: 500px;
+              height: 500px;
+              margin:auto;
+          }
+  
+          
+      </style>
         @livewireStyles()
         
     </head>
