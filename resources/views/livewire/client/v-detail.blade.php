@@ -87,7 +87,7 @@
                     <div class="w-full mt-2 md:basis-1/3 md:mt-0">
                         <h2 class="mb-5 text-2xl font-semibold text-red-600">
                             
-                            {{($bien->lib == 'A vendre') ? $bien->lib.' ('.$bien->prix.' '.$bien->devise.')' : 'Loyer '.$bien->prix.' '.$bien->devise.'/mois'}}
+                            {{($bien->lib == 'Vente') ? $bien->lib.' ('.$bien->prix.' '.$bien->devise.')' : 'Loyer '.$bien->prix.' '.$bien->devise.'/mois'}}
                         </h2>
                         <p class="text-xs text-justify">
                             Contactez-nous 
