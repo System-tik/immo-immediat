@@ -10,10 +10,14 @@
         <link rel="stylesheet" href="{{asset('css/moi.css')}}">
         <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
         <link rel="stylesheet" href="{{ asset('build/assets/app.df0ffaee.css') }}">
-        <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
-
-        <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+        
         <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <script src="{{asset('build/assets/app.ab93cf8a.js')}}"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
         <style>
           .splide__slide img {
@@ -53,8 +57,9 @@
         @yield('content')
         @livewireScripts()
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <script>
-         $(document).ready(function(){
+        <script>
+          $(document).ready(function(){
+            AOS.init();
            // Add smooth scrolling to all links
            $("a").on('click', function(event) {
          

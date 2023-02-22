@@ -1,4 +1,4 @@
-<a class="flex flex-col transition duration-200 transform shadow rounded-3xl group" href="{{route('detail', $le_bien->id)}}">
+<a class="flex flex-col transition duration-200 transform shadow rounded-3xl group" href="{{route('detail', $le_bien->id)}}" data-aos="zoom-in-down">
     {{-- Stop trying to control. --}}
     <div class="relative flex flex-col justify-between px-5 transition duration-500 transform bg-cover rounded-3xl h-52 group-hover:h-60" style=" background-image:url('{{asset(Storage::url('public/biens/'.$le_bien->id.'/0.png'))}}')">
         <div class="flex gap-2 py-5">

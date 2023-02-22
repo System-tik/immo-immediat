@@ -5,8 +5,8 @@
     </div>
     <div class="grid grid-cols-1 lg:pt-40 xl:grid-cols-3">
         <div class="flex flex-col items-center justify-center col-span-2 gap-4 text-white xl:items-start xl:py-0 lg:py-10">
-            <h1 class="text-2xl font-extrabold lg:text-4xl">IMMO-IMMEDIAT</h1>
-            <p class="text-lg font-bold lg:text-2xl">Le portail immobilier qu'il vous faut</p>
+            <h1 class="text-2xl font-extrabold lg:text-4xl" data-aos="fade-right" data-aos-duration="2000">IMMO-IMMEDIAT</h1>
+            <p class="text-lg font-bold lg:text-2xl" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">Le portail immobilier qu'il vous faut</p>
         </div>
         <form class="" method="post" action="search" x-data= "{btn :'1'}">
             <div class="flex items-center justify-center font-bold">
@@ -16,7 +16,7 @@
             </div>
             @csrf
             
-            <div class="flex flex-col gap-2 p-5 mt-6 font-bold bg-white">
+            <div class="flex flex-col gap-2 p-5 mt-6 font-bold bg-white" data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
                 <h1 class="text-2xl text-gray-700">Ou cherchez vous?</h1>
                 <div>
                     <label for="inp" class="p-1 text-xs text-gray-700">LOCALITES</label><br>
