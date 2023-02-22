@@ -122,6 +122,7 @@
                 <div class="flex flex-col gap-10 px-5 mt-6 md:flex-row md:px-0">
                     {{-- Creer compte --}}
                     <div class="w-full md:basis-1/2">
+                        @if(count($bien->caract_bien) > 0)
                         <h2 class="mb-3 text-xl font-bold">Caracteristiques</h2>
                         @foreach ($bien->caract_bien as $cb)
                         @foreach ($caracts as $c)
@@ -134,7 +135,7 @@
                         @endforeach
                             
                         @endforeach
-                        
+                        @endif
                     </div>
 
                     {{-- Se connecter --}}
